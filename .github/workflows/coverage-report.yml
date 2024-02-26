@@ -100,7 +100,7 @@ jobs:
           ls -la
           echo 'repo root stuff is'
           ls repo_root
-          ls 'workspace dir is ${{ github.workspace }}'
+          echo 'workspace dir is ${{ github.workspace }}'
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
