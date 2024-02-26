@@ -88,11 +88,14 @@ jobs:
           echo "override_pr=$(<pr_number.txt)" >> "$GITHUB_OUTPUT"
           echo "override_commit=$(<commit_sha.txt)" >> "$GITHUB_OUTPUT"
 
+          ls -la
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           ref: ${{ steps.parse_previous_artifacts.outputs.override_commit || '' }}
           path: repo_root
+          clean: false
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
