@@ -115,3 +115,4 @@ jobs:
           override_commit: ${{ steps.parse_previous_artifacts.outputs.override_commit || '' }}
           override_pr: ${{ steps.parse_previous_artifacts.outputs.override_pr || '' }}
           working-directory: ${{ github.workspace }}/repo_root
+          verbose: true
