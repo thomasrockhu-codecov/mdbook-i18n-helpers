@@ -103,7 +103,7 @@ jobs:
           echo 'workspace dir is ${{ github.workspace }}'
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v3
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           file: ${{ github.workspace }}/codecov_report.json
@@ -115,3 +115,7 @@ jobs:
           override_commit: ${{ steps.parse_previous_artifacts.outputs.override_commit || '' }}
           override_pr: ${{ steps.parse_previous_artifacts.outputs.override_pr || '' }}
           working-directory: ${{ github.workspace }}/repo_root
+<<<<<<< Updated upstream
+=======
+          verbose: true
+>>>>>>> Stashed changes
